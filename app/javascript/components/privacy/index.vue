@@ -14,9 +14,6 @@ export default {
 }
 </script>
 
-<style scoped>
-h1 {
-  font-size: 2em;
-  text-align: center;
-}
+<style lang="scss" scoped>
+   @import '../../scss/application.scss'
 </style>
