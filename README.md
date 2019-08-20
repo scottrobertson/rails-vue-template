@@ -11,7 +11,7 @@ The Rails API lives in an `api` route namespace, and everything else is delegate
 - Axios
 - Vue Router
 
-### Setup
+### Structure
 
 There is a single Rails ERB file, which is the entrypoint into Vue. It lives in `app/views/application/index.html.erb`. All other view rendering is handled by Vue.
 
