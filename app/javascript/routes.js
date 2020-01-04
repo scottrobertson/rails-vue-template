@@ -2,9 +2,9 @@ import Vue from 'vue/dist/vue.esm';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-import PageNotFound from './components/errors/404.vue';
-import HomeIndex from './components/home/index.vue';
-import PrivacyIndex from './components/privacy/index.vue';
+const PageNotFound = () => import('./pages/errors/404.vue')
+const HomeIndex = () => import('./pages/home/index.vue')
+const PrivacyIndex = () => import('./pages/privacy/index.vue')
 
 const router = new VueRouter({
   mode: 'history',
