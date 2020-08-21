@@ -1,14 +1,18 @@
 <template>
   <div>
     <h1>Home</h1>
-    <p><router-link :to="{ path: 'privacy' }">Privacy Policy</router-link></p>
+    <p>
+      <router-link :to="{ path: 'privacy' }">
+        Privacy Policy
+      </router-link>
+    </p>
 
     <template v-if="posts">
-      <post v-bind:post="post" v-for="post in posts" :key="post.id"></post>
+      <post v-for="post in posts" :key="post.id" :post="post" />
     </template>
 
     <template v-else>
-      <p><a href="#" v-on:click.prevent="getPosts">Get Posts</a></p>
+      <p><a href="#" @click.prevent="getPosts">Get Posts</a></p>
     </template>
   </div>
 </template>

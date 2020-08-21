@@ -1,7 +1,11 @@
 <template>
   <div>
     <h1>Privacy Policy</h1>
-    <p><router-link :to="{ path: '/' }">Home</router-link></p>
+    <p>
+      <router-link :to="{ path: '/' }">
+        Home
+      </router-link>
+    </p>
     <p>Privacy Policy Here</p>
   </div>
 </template>

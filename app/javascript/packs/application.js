@@ -1,10 +1,10 @@
-import Vue from 'vue/dist/vue.esm';
+import Vue from 'vue';
 import router from '../routes.js';
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 
-const app = new Vue({
+new Vue({
   router,
 }).$mount('#app')
