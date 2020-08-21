@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
   def index
-    render 'index', layout: false
+    render 'index'
   end
 end

@@ -3,13 +3,8 @@
     <h1 class="text-center text-4xl">
       Home
     </h1>
-    <p class="text-center">
-      <router-link class="underline" to="/privacy">
-        View Privacy Policy
-      </router-link>
-    </p>
 
-    <div v-if="posts" class="mx-auto w-1/2">
+    <div v-if="posts" class="lg:mx-auto lg:w-1/2 mb-5">
       <Post v-for="post in posts" :key="post.id" :post="post" />
     </div>
   </div>

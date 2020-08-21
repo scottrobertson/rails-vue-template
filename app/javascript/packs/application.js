@@ -1,9 +1,8 @@
 import Vue from 'vue'
+
 import router from '../routes.js';
 
-import axios from 'axios'
-import VueAxios from 'vue-axios'
-Vue.use(VueAxios, axios)
+import '../axios_client.js';
 
 import Layout from '../components/layout.vue'
 import '../stylesheets/application.css'
