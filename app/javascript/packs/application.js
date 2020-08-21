@@ -6,6 +6,7 @@ import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 
 import Layout from '../components/layout.vue'
+import '../stylesheets/application.css'
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({

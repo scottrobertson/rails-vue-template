@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h2>{{ post.title }}</h2>
+  <div class="bg-gray-200 mt-5 rounded-md p-5">
+    <h2 class="text-2xl">
+      {{ post.title }}
+    </h2>
     <p>{{ post.body }}</p>
     <hr>
   </div>
@@ -8,6 +10,11 @@
 
 <script>
 export default {
-  props: ['post']
+  props: {
+    post: {
+      type: Object,
+      required: true,
+    }
+  }
 }
 </script>
