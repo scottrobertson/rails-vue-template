@@ -4,8 +4,8 @@ RSpec.describe "api/posts", type: :request do
       get '/api/posts'
       expect(response).to be_successful
 
-      parsed_body = JSON.parse(response.body)
-      expect(parsed_body.size).to eq(100)
+      expect(json_body.size).to eq(100)
+      expect(json_body.first.keys).to eq(['userId', 'id', 'title', 'body'])
     end
 
   end
