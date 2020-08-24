@@ -1,10 +1,14 @@
 # Rails + Vue Template
 
-A simple template using a Vue SPA inside Rails, with a Rails API.
+A simple template using a VueJS single page application inside Rails using Webpacker along with a Rails API.
 
 Mainly used for my own personal projects, so please remove/adapt things as you need.
 
-The Rails API lives in an `api` route namespace, and everything else is delegated to the Vue Router.
+The Rails API lives in an `api` route namespace, and everything else is delegated to vue-router. This allows you to build a full single page application, while having the power of Rails available for your API etc.
+
+### Why not a "real" SPA?
+
+For me, having a single application to deploy and maintain reduces the complexity a lot. You get most of the benefits of running an SPA this way, plus the power of Rails for your API.
 
 ### Uses
 
