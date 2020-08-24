@@ -6,7 +6,7 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.0'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
