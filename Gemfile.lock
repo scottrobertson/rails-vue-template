@@ -95,7 +95,8 @@ GEM
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     pg (1.2.3)
-    puma (3.12.6)
+    puma (4.3.5)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-proxy (0.6.5)
       rack
@@ -183,9 +184,9 @@ DEPENDENCIES
   database_cleaner-active_record
   database_cleaner-redis
   pg (>= 0.18, < 2.0)
-  puma (~> 3.11)
+  puma (~> 4)
   rails (~> 6.0.0)
-  rspec-rails (~> 4.0.1)
+  rspec-rails
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
