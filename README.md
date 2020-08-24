@@ -12,7 +12,7 @@ For me, having a single application to deploy and maintain reduces the complexit
 
 ### Uses
 
-- VueJS
+- Vue.js
 - Rails
 - Axios
 - Vue Router
