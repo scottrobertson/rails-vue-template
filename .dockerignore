@@ -1,0 +1,10 @@
+log/
+tmp/
+node_modules/
+public/packs/
+public/assets/
+yarn-error.log
+.github
+pids
+test/
+spec/
