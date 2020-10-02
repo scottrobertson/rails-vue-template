@@ -20,8 +20,8 @@ This template also includes an example Dockerfile (based on Alpine) to get thing
 
 ### Structure
 
-There is a single Rails ERB file, which is the entrypoint into Vue.js. It lives in `app/views/application/index.html.erb`. All other view rendering is handled by Vue.js.
+There is a single Rails ERB file, which is the entrypoint into Vue.js. It lives in [`app/views/application/index.html.erb`](https://github.com/scottrobertson/rails-vue-template/blob/master/app/views/application/index.html.erb). All other view rendering is handled by Vue.js.
 
-Inside that ERB file, we load `app/javascript/packs/application.js`, which loads Vue.js, and delegates all routing to vue-router, with all the routes being defined in `app/javascript/routes.js`.
+Inside that ERB file, we load [`app/javascript/packs/application.js`](https://github.com/scottrobertson/rails-vue-template/blob/master/app/javascript/packs/application.js), which loads Vue.js, and delegates all routing to vue-router, with all the routes being defined in [`app/javascript/routes.js`](https://github.com/scottrobertson/rails-vue-template/blob/master/app/javascript/routes.js).
 
 The Rails API lives in an `api` route namespace, and everything else is delegated to vue-router. This allows you to build a full single page application, while having the power of Rails available for your API etc.
