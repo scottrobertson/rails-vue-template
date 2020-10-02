@@ -7,6 +7,5 @@ RSpec.describe "api/posts", type: :request do
       expect(json_body.size).to eq(100)
       expect(json_body.first.keys).to eq(['userId', 'id', 'title', 'body'])
     end
-
   end
 end

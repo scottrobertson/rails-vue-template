@@ -1,5 +1,5 @@
 module Api
-  class HomeController < Api::ApplicationController
+  class HomeController < BaseController
     def index
       render json: { ok: true }
     end
