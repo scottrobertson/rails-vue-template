@@ -1,4 +1,4 @@
-# Rails + Vue.js SPA Template
+# Rails + Vue.js SPA-ish Template
 
 A simple template for creating a Vue.js single page application inside Rails using Webpacker along with a Rails API.
 
