@@ -16,6 +16,8 @@ For me, having a single application to deploy and maintain reduces the complexit
 - Vue Router
 - Tailwind CSS
 
+This template also includes an example Dockerfile (based on Alpine) to get things running in Docker.
+
 ### Structure
 
 There is a single Rails ERB file, which is the entrypoint into Vue.js. It lives in `app/views/application/index.html.erb`. All other view rendering is handled by Vue.js.
