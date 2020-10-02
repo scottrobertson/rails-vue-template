@@ -1,7 +1,7 @@
 FROM ruby:2.7.1-alpine as base
 WORKDIR /app
 RUN apk update
-RUN apk add yarn git build-base postgresql-dev
+RUN apk add yarn git build-base postgresql-dev tzdata
 RUN gem install bundler:2.1.4
 RUN echo 'IRB.conf[:USE_MULTILINE] = false' > ~/.irbrc
 
