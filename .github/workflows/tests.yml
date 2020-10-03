@@ -38,13 +38,6 @@ jobs:
     - name: Install PostgreSQL client
       run: sudo apt-get -yqq install libpq-dev
 
-    - name: Build App
-      env:
-        RAILS_ENV: test
-      run: |
-        gem install bundler:2.1.4
-        bundle install --jobs 4 --retry 3
-
     - name: Setup database
       env:
         RAILS_ENV: test
