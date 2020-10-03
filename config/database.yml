@@ -10,7 +10,8 @@ development:
 
 test:
   <<: *default
-  database: rails_vue_template_test
+  database: rails_vue_template_development
+  url: <%= ENV['DATABASE_URL'] %>
 
 production:
   <<: *default

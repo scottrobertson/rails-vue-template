@@ -31,9 +31,11 @@ jobs:
     - name: Setup database
       env:
         RAILS_ENV: test
+        DATABASE_URL: postgresql://localhost/tests
       run: bundle exec rails db:setup
 
     - name: Run Tests
       env:
         RAILS_ENV: test
+        DATABASE_URL: postgresql://localhost/tests
       run: bundle exec rspec
