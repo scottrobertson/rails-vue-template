@@ -10,6 +10,8 @@ jobs:
         os:
           - ubuntu
         ruby:
+          - head
+          - 2.6
           - 2.7
 
     runs-on: ${{ matrix.os }}-latest
@@ -38,14 +40,12 @@ jobs:
     - name: Install PostgreSQL client
       run: sudo apt-get -yqq install libpq-dev
 
-    - name: Setup database
+    - run: bundle exec rails db:setup
       env:
         RAILS_ENV: test
         DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
-      run: bundle exec rails db:setup
 
-    - name: Run Tests
+    - run: bundle exec rspec
       env:
         RAILS_ENV: test
         DATABASE_URL: postgresql://postgres:postgres@localhost/postgres
-      run: bundle exec rspec
