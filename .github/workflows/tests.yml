@@ -8,7 +8,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:11.5
+        image: postgres:12-alpine
         ports: ["5432:5432"]
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
@@ -23,19 +23,29 @@ jobs:
     - name: Install PostgreSQL client
       run: sudo apt-get -yqq install libpq-dev
 
+    - uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
     - name: Build App
       env:
         RAILS_ENV: test
-      run: gem install bundler:2.1.4 && bundle install --jobs 4 --retry 3
+      run: |
+        gem install bundler:2.1.4
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
 
     - name: Setup database
       env:
         RAILS_ENV: test
-        DATABASE_URL: postgresql://localhost/tests
+        DATABASE_URL: postgresql://localhost/postgres
       run: bundle exec rails db:setup
 
     - name: Run Tests
       env:
         RAILS_ENV: test
-        DATABASE_URL: postgresql://localhost/tests
+        DATABASE_URL: postgresql://localhost/postgres
       run: bundle exec rspec
