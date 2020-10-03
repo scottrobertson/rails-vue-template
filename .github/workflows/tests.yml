@@ -4,17 +4,7 @@ on: push
 
 jobs:
   build:
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - ubuntu
-        ruby:
-          - head
-          - 2.6
-          - 2.7
-
-    runs-on: ${{ matrix.os }}-latest
+    runs-on: ubuntu-latest
 
     services:
       postgres:
@@ -34,7 +24,7 @@ jobs:
 
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: ${{ matrix.ruby }}
+        ruby-version: 2.7
         bundler-cache: true
 
     - name: Install PostgreSQL client
