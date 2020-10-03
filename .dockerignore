@@ -8,3 +8,4 @@ yarn-error.log
 pids
 test/
 spec/
+.github
