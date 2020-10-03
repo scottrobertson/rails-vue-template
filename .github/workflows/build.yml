@@ -29,7 +29,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-        if: ${{ secrets.DOCKERHUB_USERNAME }}
+        if: secrets.DOCKERHUB_USERNAME
 
       - name: Build and push
         id: docker_build
