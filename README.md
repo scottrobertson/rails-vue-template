@@ -20,8 +20,10 @@ For me, having a single application to deploy and maintain reduces the complexit
 ### Also sets up
 
 - An example Dockerfile, based on alpine to keep the size down
-- Github actions, which sets up ruby, the database and runs rspec
 - Dependabot for Bundler and Yarn
+- Github actions
+  - Run RSpec
+  - Build docker image
 
 ### Structure
 
