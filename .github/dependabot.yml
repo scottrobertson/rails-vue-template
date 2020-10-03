@@ -16,3 +16,10 @@ updates:
       - "bundler"
       - "dependencies"
 
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "yarn"
+      - "dependencies"
