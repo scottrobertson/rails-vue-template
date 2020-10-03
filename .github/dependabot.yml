@@ -4,22 +4,13 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    labels:
-      - "github-actions"
-      - "dependencies"
 
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
       interval: "daily"
-    labels:
-      - "bundler"
-      - "dependencies"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
-    labels:
-      - "yarn"
-      - "dependencies"
