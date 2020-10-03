@@ -38,6 +38,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/${{ github.actor }}/application:sha_${{ github.sha }}
+          tags: ghcr.io/${{ github.actor }}/rails_vue_template:sha_${{ github.sha }}
           cache-from: type=local,src=/tmp/.docker-buildx-cache
           cache-to: type=local,dest=/tmp/.docker-buildx-cache
