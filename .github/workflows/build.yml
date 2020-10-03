@@ -19,10 +19,10 @@ jobs:
       - name: Cache Docker layers
         uses: actions/cache@v2
         with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          path: /tmp/.docker-buildx-cache
+          key: ${{ runner.os }}-docker-buildx-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-buildx-
+            ${{ runner.os }}-docker-buildx-
 
       - name: Login to Github Packages
         uses: docker/login-action@v1
@@ -37,5 +37,5 @@ jobs:
         with:
           push: true
           tags: docker.pkg.github.com/${{ github.repository	}}/application:sha_${{ github.sha }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache
+          cache-from: type=local,src=/tmp/.docker-buildx-cache
+          cache-to: type=local,dest=/tmp/.docker-buildx-cache
