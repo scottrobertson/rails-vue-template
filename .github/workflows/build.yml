@@ -10,10 +10,6 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - name: Assign SHOULD_PUSH variable
-        id: SHOULD_PUSH
-        run: echo '::set-output name=secret::${{secrets.DOCKERHUB_USERNAME}}'
-
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -33,13 +29,14 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-        if: steps.SHOULD_PUSH.outputs.SHOULD_PUSH
 
-      - name: Build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v1
         with:
-          push: ${{ steps.SHOULD_PUSH.outputs.SHOULD_PUSH }}
-          tags: ${{ github.repository	 }}:${{ github.sha }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: ${{ github.repository }}/application
+          tag_with_ref: true
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
