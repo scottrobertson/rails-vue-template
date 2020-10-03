@@ -13,6 +13,10 @@
         Load More
       </button>
     </div>
+
+    <div v-else class="text-center">
+      Loading...
+    </div>
   </div>
 </template>
 
