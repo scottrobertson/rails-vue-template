@@ -13,7 +13,6 @@ RUN bundle install --jobs 4 --retry 2 && rm -rf /usr/local/bundle/cache
 
 FROM base
 COPY --from=bundle /usr/local/bundle/ /usr/local/bundle/
-
 ADD yarn.lock package.json /app/
 RUN yarn install
 ADD . /app
