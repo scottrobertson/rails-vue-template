@@ -2,7 +2,9 @@ name: Build
 
 on:
   push:
-    branches: master
+    branches:
+      - master
+      - docker-build-push
 
 jobs:
   main:
