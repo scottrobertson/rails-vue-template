@@ -23,7 +23,18 @@ For me, having a single application to deploy and maintain reduces the complexit
 - Dependabot for Bundler and Yarn
 - Github actions
   - Run RSpec
-  - Build docker image
+  - Build & Push Docker image to Github Container Registry (See Below)
+
+#### Github Container Registry
+
+By default, this repo will just build the Docker image in Github Actions, but it will not push it anywhere.
+
+To push these images to the Github Container Registry, please do the following:
+
+- Head over to [Personal access tokens](https://github.com/settings/tokens), and create a token with `write:packages` permissions.
+- Edit this repository, and got to Secrets
+- Add the token from step one with the key `GHCR_TOKEN`
+- Now each time you push to master, an image will be built, tagged with that commit hash, and pushed to Github Container Registry.
 
 ### Structure
 
