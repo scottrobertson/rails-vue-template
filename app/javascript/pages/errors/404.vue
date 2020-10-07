@@ -4,10 +4,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  data: function () {
-    return {}
-  }
-}
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+})
 </script>

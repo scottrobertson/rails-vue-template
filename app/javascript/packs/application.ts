@@ -1,10 +1,10 @@
 import Vue from 'vue'
 
-import router from '../routes.js';
-
-import '../axios_client.js';
-
+import router from '../routes'
 import Layout from '../components/layout.vue'
+
+import '../axios_client'
+
 import '../stylesheets/application.css'
 
 document.addEventListener('DOMContentLoaded', () => {
