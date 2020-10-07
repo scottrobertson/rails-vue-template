@@ -9,12 +9,14 @@
 </template>
 
 <script>
-export default {
+import Vue from 'vue'
+
+export default Vue.extend({
   props: {
     post: {
       type: Object,
       required: true,
-    }
-  }
-}
+    },
+  },
+})
 </script>
