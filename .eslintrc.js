@@ -1,9 +1,11 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
+  root: true,
   parser: 'vue-eslint-parser',
   env: {
-    browser: true
+    browser: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
@@ -57,5 +59,6 @@ module.exports = {
     }],
     'import/extensions': 'off',
     'import/no-named-as-default-member': 'off',
+    'semi': ['warn', 'never'],
   },
-};
+}

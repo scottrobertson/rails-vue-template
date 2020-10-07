@@ -20,23 +20,28 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 
 import Post from '../../components/post.vue'
 
-export default {
+interface Data {
+  posts: any[] // TODO: Make an interface for the post data
+}
+
+export default Vue.extend({
   components: {
-    Post
+    Post,
   },
 
-  data: function () {
+  data(): Data {
     return {
-      posts: null
+      posts: null,
     }
   },
 
   mounted() {
-    this.fetchData();
+    this.fetchData()
   },
 
   methods: {
@@ -49,5 +54,5 @@ export default {
       this.posts.push(...data)
     },
   }
-}
+})
 </script>

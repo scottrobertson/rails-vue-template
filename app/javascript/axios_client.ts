@@ -1,6 +1,5 @@
 import VueAxios from 'vue-axios'
 import Vue from 'vue'
-
 import axios from 'axios'
 
 const token = document.getElementsByName('csrf-token')[0].getAttribute('content')
