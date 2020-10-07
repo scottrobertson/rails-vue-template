@@ -9,7 +9,7 @@ import '../stylesheets/application.css'
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
-    render: h => h(Layout),
+    render: (h) => h(Layout),
     router,
   }).$mount()
 
