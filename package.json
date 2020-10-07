@@ -7,7 +7,7 @@
     "@rails/ujs": "^6",
     "@rails/webpacker": "^5",
     "axios": "^0.20.0",
-    "tailwindcss": "^1.7.3",
+    "tailwindcss": "^1.8.11",
     "turbolinks": "^5.2.0",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
