@@ -18,10 +18,4 @@ jobs:
       run: yarn install
 
     - name: Run linters
-      uses: wearerequired/lint-action@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        eslint: true
-        eslint_dir: app/javascript
-        eslint_args: "--max-warnings 0"
-        eslint_extensions: js,ts,vue
+      run: yarn lint
