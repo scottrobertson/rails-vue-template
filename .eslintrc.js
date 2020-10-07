@@ -21,16 +21,16 @@ module.exports = {
         config: {
           resolve: {
             alias: {
-              '~brand-components': path.resolve(__dirname, 'app/vue/brand-components'),
-              '~components': path.resolve(__dirname, 'app/vue/components'),
-              '~models': path.resolve(__dirname, 'app/vue/models'),
-              '~pages': path.resolve(__dirname, 'app/vue/pages'),
-              '~images': path.resolve(__dirname, 'app/vue/images'),
-              '~utils': path.resolve(__dirname, 'app/vue/utils'),
-              '~plugins': path.resolve(__dirname, 'app/vue/plugins'),
-              '~store': path.resolve(__dirname, 'app/vue/store'),
-              '~locale': path.resolve(__dirname, 'app/vue/locale'),
-              '~stylesheets': path.resolve(__dirname, 'app/vue/stylesheets'),
+              '~brand-components': path.resolve(__dirname, 'app/javascript/brand-components'),
+              '~components': path.resolve(__dirname, 'app/javascript/components'),
+              '~models': path.resolve(__dirname, 'app/javascript/models'),
+              '~pages': path.resolve(__dirname, 'app/javascript/pages'),
+              '~images': path.resolve(__dirname, 'app/javascript/images'),
+              '~utils': path.resolve(__dirname, 'app/javascript/utils'),
+              '~plugins': path.resolve(__dirname, 'app/javascript/plugins'),
+              '~store': path.resolve(__dirname, 'app/javascript/store'),
+              '~locale': path.resolve(__dirname, 'app/javascript/locale'),
+              '~stylesheets': path.resolve(__dirname, 'app/javascript/stylesheets'),
             },
             extensions: [
               '.js', '.ts', '.vue',
