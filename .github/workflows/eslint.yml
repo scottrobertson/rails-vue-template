@@ -1,0 +1,21 @@
+name: ESLint
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2.3.3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+
+    - name: Install Yarn dependencies
+      run: yarn install
+
+    - name: Run linters
+      run: yarn lint
