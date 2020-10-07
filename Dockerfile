@@ -11,9 +11,20 @@ RUN bundle config set no-cache 'true'
 RUN bundle config set without 'development test'
 RUN bundle install --jobs 4 --retry 2 && rm -rf /usr/local/bundle/cache
 
-FROM base
-COPY --from=bundle /usr/local/bundle/ /usr/local/bundle/
-ADD yarn.lock package.json /app/
-RUN yarn install
+FROM bundle as webpack
+WORKDIR /app
+COPY package.json /app/
+COPY yarn.lock /app/
+RUN yarn install --frozen-lockfile
 ADD . /app
-RUN NODE_ENV=production RAILS_ENV=production SECRET_KEY_BASE=$(rails secret) rails assets:precompile
+ENV RAILS_ENV='production'
+ENV NODE_ENV='production'
+RUN bin/webpack
+
+FROM base as runtime
+COPY --from=bundle /usr/local/bundle/ /usr/local/bundle/
+COPY --from=webpack /app/public/packs /app/public/packs
+ADD . /app
+RUN mkdir -p tmp/pids
+
+CMD ["bundle", "exec", "puma"]
