@@ -53,6 +53,6 @@ export default Vue.extend({
       const { data } = await this.axios.get('/api/posts.json')
       this.posts.push(...data)
     },
-  }
+  },
 })
 </script>
