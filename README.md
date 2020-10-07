@@ -8,13 +8,15 @@ Mainly used for my own personal projects, so please remove/adapt things as you n
 
 For me, having a single application to deploy and maintain reduces the complexity a lot. You get most of the benefits of running an SPA this way, plus the power of Rails for your API.
 
-### Uses
+### Technology Used
 
-- Vue.js
 - Rails
-- Rspec
+- RSpec
+- ESLint
 - Axios
+- Vue.js
 - Vue Router
+- Typescript
 - Tailwind CSS
 
 ### Also sets up
