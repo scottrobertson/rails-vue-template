@@ -23,7 +23,9 @@ For me, having a single application to deploy and maintain reduces the complexit
 - Dependabot for Bundler and Yarn
 - Github actions
   - Run RSpec
-  - Build & Push Docker image to Github Container Registry (See Below)
+  - Run ESLint
+  - Build Docker image
+  - Push Docker image to Github Container Registry (Optional - See below)
 
 #### Github Container Registry
 
