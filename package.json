@@ -18,7 +18,7 @@
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
     "vue-loader": "^15.7.1",
-    "vue-router": "^3.4.7",
+    "vue-router": "^3.4.8",
     "vue-template-compiler": "^2.6.10"
   },
   "version": "0.1.0",
