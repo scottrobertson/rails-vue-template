@@ -926,7 +926,8 @@
 
 "@rails/webpacker@rails/webpacker":
   version "5.1.1"
-  resolved "https://codeload.github.com/rails/webpacker/tar.gz/eaf3aa8ab465526107658659e151b89856988362"
+  uid ce597a5d167062c4a74eb93067afbee0dd946ec9
+  resolved "https://codeload.github.com/rails/webpacker/tar.gz/ce597a5d167062c4a74eb93067afbee0dd946ec9"
   dependencies:
     "@babel/core" "^7.12.9"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
