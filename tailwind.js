@@ -1,18 +1,9 @@
 module.exports = {
-  purge: {
-    enabled: false,
-    content: [
-      './app/**/*.vue',
-      './app/views/**/*.html.erb'
-    ],
-  },
-  theme: {
-
-  },
-  variants: {},
-  plugins: [
+  purge: [
+    './app/**/*.vue',
+    './app/**/*.html.erb',
   ],
-  future: {
-    removeDeprecatedGapUtilities: true,
-  },
+  theme: {},
+  variants: {},
+  plugins: [],
 }
