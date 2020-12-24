@@ -26,5 +26,6 @@ COPY --from=bundle /usr/local/bundle/ /usr/local/bundle/
 COPY --from=webpack /app/public/packs /app/public/packs
 ADD . /app
 RUN mkdir -p tmp/pids
+RUN bundle exec bootsnap precompile --gemfile app/ lib/
 
 CMD ["bundle", "exec", "puma"]
