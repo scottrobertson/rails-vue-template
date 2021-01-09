@@ -18,8 +18,8 @@ COPY yarn.lock /app/
 RUN yarn install --frozen-lockfile
 ADD . /app
 ENV RAILS_ENV='production'
-ENV NODE_ENV='production'
-RUN bin/webpack
+ENV SECRET_KEY_BASE='blank'
+RUN bundle exec rake webpacker:compile
 
 FROM base as runtime
 COPY --from=bundle /usr/local/bundle/ /usr/local/bundle/
