@@ -6391,7 +6391,7 @@ webpack-dev-middleware@^4.0.2:
     range-parser "^1.2.1"
     schema-utils "^3.0.0"
 
-webpack-dev-server@^4:
+webpack-dev-server@4.0.0-beta.0:
   version "4.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-4.0.0-beta.0.tgz#39065e19b0df793314c02cd72474bb54312ebc06"
   integrity sha512-mVD4Hn3bsMdcq6qE0y8xvH6KAu9NwS6F0NNgFe+n6gbsTQ7YgffUDydvy2iieyyKjAcBJDT5PZexv9tKv8kTNQ==
