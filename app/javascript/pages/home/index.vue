@@ -20,7 +20,7 @@ import Vue from "vue";
 import Post from "../../components/post.vue";
 
 interface Data {
-  posts: any[]; // TODO: Make an interface for the post data
+  posts: unknown[]; // TODO: Make an interface for the post data
 }
 
 export default Vue.extend({

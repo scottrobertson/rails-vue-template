@@ -2,8 +2,7 @@
   "name": "vue_template",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.vue app/javascript --max-warnings 0",
-    "fix": "yarn lint --fix"
+    "lint": "eslint --ext .js,.ts,.vue app/javascript --max-warnings 0"
   },
   "dependencies": {
     "@rails/actioncable": "^6",
