@@ -19,10 +19,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
+  gem 'prettier'
   gem 'rspec-rails'
-  gem 'rubocop-rails'
-  gem 'rubocop-performance'
-  gem 'rubocop-rspec'
 end
 
 group :test do

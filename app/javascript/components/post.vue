@@ -4,12 +4,12 @@
       {{ post.title }}
     </h2>
     <p>{{ post.body }}</p>
-    <hr>
+    <hr />
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
+import Vue from "vue";
 
 export default Vue.extend({
   props: {
@@ -18,5 +18,5 @@ export default Vue.extend({
       required: true,
     },
   },
-})
+});
 </script>
