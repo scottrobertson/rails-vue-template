@@ -6,7 +6,7 @@ ruby '2.7.2'
 gem 'rails', '~> 6.1.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 5'
-gem "webpacker", github: "rails/webpacker", ref: 'b6c21802bfd4968c6e22d6faf69a45ee1ff3eb19'
+gem "webpacker", '6.0.0.beta.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
