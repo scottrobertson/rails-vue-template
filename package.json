@@ -52,7 +52,8 @@
   },
   "babel": {
     "presets": [
-      "./node_modules/@rails/webpacker/package/babel/preset.js"
+      "./node_modules/@rails/webpacker/package/babel/preset.js",
+      "@babel/preset-typescript"
     ]
   },
   "browserslist": [
