@@ -6,6 +6,7 @@ const vueConfig = require("./rules/vue");
 // chunks" but those chunks are never executed, so the Vue app is never started.
 delete Webpacker.webpackConfig.optimization;
 
+
 const cssConfig = {
   resolve: {
     extensions: [".css"],
