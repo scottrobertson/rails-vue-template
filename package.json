@@ -2,7 +2,7 @@
   "name": "vue_template",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue app/javascript"
+    "lint": "eslint --ext .js,.vue,.ts app/javascript"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.12.7",
