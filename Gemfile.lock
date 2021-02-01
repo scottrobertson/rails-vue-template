@@ -69,8 +69,9 @@ GEM
     database_cleaner-active_record (1.8.0)
       activerecord
       database_cleaner (~> 1.8.0)
-    database_cleaner-redis (1.8.0)
-      database_cleaner (~> 1.8.0)
+    database_cleaner-core (2.0.0)
+    database_cleaner-redis (2.0.0)
+      database_cleaner-core (~> 2.0.0)
       redis
     diff-lcs (1.4.4)
     erubi (1.10.0)
