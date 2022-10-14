@@ -5,7 +5,7 @@ ruby '2.7.2'
 
 gem 'rails', '~> 6.1.1'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 5'
+gem 'puma', '~> 6'
 gem "webpacker", '6.0.0.beta.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false
